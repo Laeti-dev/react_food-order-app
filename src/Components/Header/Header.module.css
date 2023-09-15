@@ -1,0 +1,21 @@
+.header {
+  background-color: #FFE17B;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h2 {
+  padding-left: 2rem;
+}
+
+button {
+  width: 10rem;
+  height: 3rem;
+}
+
+img {
+  height: 20rem;
+  width: 100%;
+}
