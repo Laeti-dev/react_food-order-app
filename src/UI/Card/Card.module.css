@@ -1,0 +1,11 @@
+.card {
+  width: 80%;
+  margin: auto;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+h2 {
+  font-size: medium;
+  font-weight: bold;
+}

@@ -1,19 +1,20 @@
 import React from "react";
 
-import CartIcon from "../CartIcon/CartIcon";
-import style from "./HeaderButton.module.css";
+import CartIcon from "../Cart/CartIcon";
+import styles from "./HeaderButton.module.css";
 
 const Button = (props) => {
   return (
     <button
       type="submit"
       onClick={props.children}
-      className={style.btn}
+      className={styles.btn}
     >
-      <span className={style.icon}>
+      <span className={styles.icon}>
         <CartIcon />
       </span>
       <span>Your cart</span>
+      <span className={styles.badge}>0</span>
     </button>
   )
 };

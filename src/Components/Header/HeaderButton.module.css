@@ -1,5 +1,5 @@
 .btn {
-  width: 10rem;
+  width: fit-content;
   height: 3rem;
   background-color: #FD8D14;
   color: #FFE17B;
@@ -12,11 +12,20 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  gap: 1rem;
 }
 
 .icon {
   width: 2rem;
   height: 2rem;
+}
+
+.badge{
+  border-radius: 3rem;
+  background-color: #FFE17B;
+  color: #FD8D14;
+  padding: 0.5rem 1rem;
+
 }
 
 .btn:hover,
