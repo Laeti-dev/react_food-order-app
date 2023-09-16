@@ -4,6 +4,7 @@ import CartIcon from "../Cart/CartIcon";
 import styles from "./HeaderButton.module.css";
 
 const Button = (props) => {
+  // State for counting items in cart
   return (
     <button
       type="submit"

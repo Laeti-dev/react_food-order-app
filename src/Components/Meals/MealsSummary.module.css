@@ -1,0 +1,19 @@
+.summary {
+  position: relative;
+  width: 50%;
+  margin: auto;
+  margin-top: -7rem;
+  background-color: #CECE5A;
+  opacity: 0.8;
+  border-radius: 1rem;
+  color: whitesmoke;
+  font-size: x-large;
+  text-shadow: 4px 0 0.5rem #57570b;
+  z-index: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+.summary h2 {
+  font-size: x-large;
+}
