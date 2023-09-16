@@ -1,0 +1,26 @@
+.btn {
+  width: 10rem;
+  height: 3rem;
+  background-color: #FD8D14;
+  color: #FFE17B;
+  font-weight: 600;
+  font-size: medium;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #CECE5A;
+  color: #FD8D14;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Button from "../../UI/Card/Button/Button";
+import HeaderButton from "./HeaderButton";
 
 import style from "./Header.module.css";
 import foodImage from "../../assets/foodiesfeed.com_healthy-foods.jpg";
@@ -10,7 +10,7 @@ const Header = () => {
     <React.Fragment>
       <header className={style.header}>
         <h2>ReactMeals</h2>
-        <Button>Your cart</Button>
+        <HeaderButton />
       </header>
       <img src={foodImage} alt="healthy food"/>
     </React.Fragment>
