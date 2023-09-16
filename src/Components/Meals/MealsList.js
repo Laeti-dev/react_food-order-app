@@ -1,6 +1,6 @@
 import React from "react";
 
-// import MealItem from "./MealItem"
+import MealItem from "./MealItem";
 
 const DUMMY_MEALS = [
   {
@@ -30,7 +30,14 @@ const DUMMY_MEALS = [
 ];
 
 const MealsList = () => {
-  const mealsList = DUMMY_MEALS.map((meal) => <li>{meal.name}</li>)
+  const mealsList = DUMMY_MEALS.map((meal) =>
+    <MealItem
+      key = {meal.id}
+      name = {meal.name}
+      description = {meal.description}
+      price = {meal.price}
+    />);
+
   return (
     <section>
       {/* map the meals objetcts and return meals items */}

@@ -1,28 +1,14 @@
 import React from "react";
 
-import Card from "../../UI/Card/Card";
+// import Card from "../../UI/Card/Card";
 
-const MealItem = () => {
+const MealItem = (props) => {
   return (
-    <Card>
-      <div>
-        <h2>Meal name</h2>
-        <p>Meal description</p>
-        <p>Meal price</p>
-      </div>
-
-      <div>
-        <form>
-        <label>Quantity</label>
-        <input
-              type="number"
-              min= "0"
-              max= "10"
-          />
-          </form>
-          <button type="submit">Add</button>
-        </div>
-        </Card>
+      <li>
+        <h2>{props.name}</h2>
+        <p>{props.description}</p>
+        <p>{props.price}</p>
+      </li>
   );
 };
 
