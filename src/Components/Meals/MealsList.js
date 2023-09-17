@@ -1,6 +1,7 @@
 import React from "react";
 
 import MealItem from "./MealItem";
+import Card from "../../UI/Card/Card"
 
 const DUMMY_MEALS = [
   {
@@ -40,8 +41,10 @@ const MealsList = () => {
 
   return (
     <section>
+      <Card>
       {/* map the meals objetcts and return meals items */}
-      <ul>{mealsList}</ul>
+        <ul>{mealsList}</ul>
+      </Card>
     </section>
   );
 };

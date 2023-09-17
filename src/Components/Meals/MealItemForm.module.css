@@ -1,0 +1,27 @@
+.form {
+  display: inline;
+}
+
+.form input {
+  margin: 0.5rem;
+}
+
+.form button {
+  display: block;
+  margin: auto;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  border-color: #FD8D14;
+  background-color: #FD8D14;
+  width: 4rem;
+  height: 1.8rem;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.form button:hover,
+.form button:active {
+  background-color: #CECE5A;
+  border-color: #CECE5A;
+  color: #FD8D14;
+}

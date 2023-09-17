@@ -1,13 +1,20 @@
 import React from "react";
 
-// import Card from "../../UI/Card/Card";
+import MealsItemForm from "./MealItemForm";
+
+import styles from "./MealItem.module.css"
 
 const MealItem = (props) => {
   return (
-      <li>
-        <h2>{props.name}</h2>
-        <p>{props.description}</p>
-        <p>{props.price}</p>
+      <li className={styles.meal}>
+        <div>
+          <h2>{props.name}</h2>
+          <p>{props.description}</p>
+          <p className={styles.price}>{props.price} $</p>
+        </div>
+        <div className={styles.input}>
+          <MealsItemForm />
+        </div>
       </li>
   );
 };

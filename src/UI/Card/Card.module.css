@@ -3,9 +3,6 @@
   margin: auto;
   border-radius: 2rem;
   background-color: white;
-}
-
-h2 {
-  font-size: medium;
-  font-weight: bold;
+  /* box-shadow: 0.5rem 0.5rem  ; */
+  padding: 0;
 }
