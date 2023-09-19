@@ -7,12 +7,12 @@ import styles from "./MealItemForm.module.css"
 const MealsItemForm = (props) => {
   const [itemQuantity, setItemQuantity] = useState("0")
 
-  const quantityHandler = () => {
-    console.log(itemQuantity)
+  const quantityChangeHandler = (event) => {
+    return console.log(event.target.value)
   }
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    console.log(itemQuantity)
+    console.log(quantityChangeHandler)
   }
   return (
     <form
@@ -28,6 +28,7 @@ const MealsItemForm = (props) => {
           max: "10",
           defaultValue: "0"
         }}
+        onChange={quantityChangeHandler}
       />
       <button>Add</button>
     </form>
