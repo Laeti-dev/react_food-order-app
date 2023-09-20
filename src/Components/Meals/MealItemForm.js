@@ -8,7 +8,7 @@ const MealsItemForm = (props) => {
   const [itemQuantity, setItemQuantity] = useState("0")
 
   const quantityChangeHandler = (event) => {
-    return console.log(event.target.value)
+    console.log(event.target.value)
   }
   const formSubmitHandler = (event) => {
     event.preventDefault();

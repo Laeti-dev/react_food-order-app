@@ -10,8 +10,3 @@
 .price {
   color: #FD8D14;
 }
-
-.input {
-  display: flex;
-  flex-direction: column;
-}
