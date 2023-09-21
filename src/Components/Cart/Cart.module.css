@@ -1,0 +1,13 @@
+.cart-items {
+  list-style: none;
+}
+
+.cart-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cart-actions {
+
+}

@@ -1,10 +1,11 @@
 import React from "react";
 
 import Modal from "../../UI/Modal";
+import styles from "./Cart.module.css";
 
 const Cart = () => {
   const cartItems = (
-    <ul>
+    <ul className={styles["cart-items"]}>
       {[{ id: 'c1', name: 'Sushi', amount: 2, price: 12.99 }].map((item) => (
         <li>{item.name}</li>
       ))}
@@ -13,7 +14,7 @@ const Cart = () => {
   return(
     <Modal>
       {cartItems}
-      <div>
+      <div className={styles["cart-total"]}>
         <span>Total qty</span>
         <span>$$</span>
       </div>
