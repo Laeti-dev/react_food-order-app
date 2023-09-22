@@ -1,7 +1,7 @@
 import React from "react";
 
 import MealItem from "./MealItem";
-import Card from "../../UI/Card"
+import Card from "../UI/Card"
 
 const DUMMY_MEALS = [
   {

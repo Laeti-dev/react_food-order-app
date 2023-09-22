@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-import Input from "../../UI/Input";
+import Input from "../UI/Input";
 
 import styles from "./MealItemForm.module.css"
 

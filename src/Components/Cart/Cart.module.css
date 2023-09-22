@@ -9,5 +9,31 @@
 }
 
 .cart-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
 
+.cart-actions button{
+  border-radius: 0.5rem;
+  border-color: transparent;
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart-actions .order {
+  background-color: #FD8D14;
+}
+
+.cart-actions .cancel{
+  text-shadow: 1rem black;
+}
+
+.order:hover,
+.order:active {
+background-color: #CECE5A;
+color: white;
 }
