@@ -1,9 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
 
 import CartIcon from "../Cart/CartIcon";
+import CartContext from "../../store/cart-context";
+
 import styles from "./HeaderButton.module.css";
 
 const Button = (props) => {
+  const cartContext = useContext(CartContext);
+  const countCartItems = cartContext.items.reduce((currCount, item)=>{
+    return (currCount + item.total)
+  }, 0)
 
   return (
     <button
@@ -14,7 +20,7 @@ const Button = (props) => {
         <CartIcon />
       </span>
       <span>Your cart</span>
-      <span className={styles.badge}>0</span>
+      <span className={styles.badge}>{countCartItems}</span>
     </button>
   )
 };
