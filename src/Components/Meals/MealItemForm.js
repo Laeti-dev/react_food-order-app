@@ -1,25 +1,32 @@
-import React, {useState} from "react";
+import React, { useRef } from "react";
 
 import Input from "../UI/Input";
 
 import styles from "./MealItemForm.module.css"
 
 const MealsItemForm = (props) => {
-  const [itemQuantity, setItemQuantity] = useState("0")
+  const quantityInputRef = useRef();
 
-  const quantityChangeHandler = (event) => {
-    console.log(event.target.value)
-  }
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    console.log(quantityChangeHandler)
-  }
+
+    const inputQuantity = quantityInputRef.current.value;
+    const quantityInt = +inputQuantity;
+
+    if (inputQuantity.trim().length === 0 || quantityInt <= 0 || quantityInt >10) {
+      return
+    };
+
+    props.onAddItemToCart(quantityInt);
+  };
+
   return (
     <form
       className={styles.form}
       onSubmit={formSubmitHandler}
     >
       <Input
+        ref={quantityInputRef}
         label="quantity"
         input={{
           id: "qty" + props.id,
@@ -28,7 +35,6 @@ const MealsItemForm = (props) => {
           max: "10",
           defaultValue: "0"
         }}
-        onChange={quantityChangeHandler}
       />
       <button>Add</button>
     </form>

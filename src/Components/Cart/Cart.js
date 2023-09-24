@@ -6,8 +6,8 @@ import styles from "./Cart.module.css";
 const Cart = (props) => {
   const cartItems = (
     <ul className={styles["cart-items"]}>
-      {[{ id: 'c1', name: 'Sushi', amount: 2, price: 12.99 }].map((item) => (
-        <li id={item.id}>{item.name}</li>
+      {[{ id: 'c1', name: 'Sushi', quantity: 2, price: 12.99 }].map((item) => (
+        <li key={item.id}>{item.name}</li>
       ))}
     </ul>
   );

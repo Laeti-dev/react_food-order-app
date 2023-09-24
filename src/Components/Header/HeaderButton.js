@@ -7,8 +7,9 @@ import styles from "./HeaderButton.module.css";
 
 const Button = (props) => {
   const cartContext = useContext(CartContext);
+
   const countCartItems = cartContext.items.reduce((currCount, item)=>{
-    return (currCount + item.total)
+    return (currCount + item.quantity)
   }, 0)
 
   return (
