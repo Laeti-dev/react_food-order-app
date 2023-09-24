@@ -21,8 +21,8 @@ const Cart = (props) => {
     <Modal onClose={props.onCloseCart}>
       {cartItems}
       <div className={styles["cart-total"]}>
-        <span>Total qty</span>
-        <span>$$</span>
+        <span>Total</span>
+        <span>$ {cartContext.total}</span>
       </div>
       <div className={styles["cart-actions"]}>
         <button className={styles.cancel} onClick={props.onCloseCart}>Cancel</button>
