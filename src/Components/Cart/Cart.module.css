@@ -1,7 +1,3 @@
-.cart-items {
-  list-style: none;
-}
-
 .cart-total {
   display: flex;
   flex-direction: row;
