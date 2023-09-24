@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Modal from "../UI/Modal";
+import CartContext from "../../store/cart-context";
 import styles from "./Cart.module.css";
 
 const Cart = (props) => {
+  const cartContext = useContext(CartContext);
+
   const cartItems = (
     <ul className={styles["cart-items"]}>
-      {[{ id: 'c1', name: 'Sushi', quantity: 2, price: 12.99 }].map((item) => (
+      {cartContext.items.map((item) => (
         <li key={item.id}>{item.name}</li>
       ))}
     </ul>
   );
+
+  const hasItems = cartContext.items.length > 0
 
   return(
     <Modal onClose={props.onCloseCart}>
@@ -21,7 +26,7 @@ const Cart = (props) => {
       </div>
       <div className={styles["cart-actions"]}>
         <button className={styles.cancel} onClick={props.onCloseCart}>Cancel</button>
-        <button className={styles.order}>Order</button>
+        {hasItems && <button className={styles.order}>Order</button>}
       </div>
     </Modal>
   )

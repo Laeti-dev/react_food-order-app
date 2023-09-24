@@ -10,7 +10,7 @@ const Button = (props) => {
 
   const countCartItems = cartContext.items.reduce((currCount, item)=>{
     return (currCount + item.quantity)
-  }, 0)
+  }, 0);
 
   return (
     <button
