@@ -8,6 +8,10 @@ import styles from "./Cart.module.css";
 const Cart = (props) => {
   const cartContext = useContext(CartContext);
 
+  const removeItemFromCart = () => {};
+
+  const AddItemToCart = () => {};
+
   const cartItems = (
     <ul className={styles["cart-items"]}>
       {cartContext.items.map((item) => (
@@ -16,6 +20,8 @@ const Cart = (props) => {
           name={item.name}
           price={item.price}
           quantity={item.quantity}
+          onRemove = {removeItemFromCart.bind(null,item.id)}
+          onAdd = {AddItemToCart.bind(null,item)}
         />
       ))}
     </ul>
@@ -28,7 +34,7 @@ const Cart = (props) => {
       {cartItems}
       <div className={styles["cart-total"]}>
         <span>Total</span>
-        <span>$ {cartContext.total}</span>
+        <span>$ {cartContext.total.toFixed(2)}</span>
       </div>
       <div className={styles["cart-actions"]}>
         <button className={styles.cancel} onClick={props.onCloseCart}>Cancel</button>

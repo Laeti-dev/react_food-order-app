@@ -10,13 +10,16 @@ const MealsItemForm = (props) => {
   const formSubmitHandler = (event) => {
     event.preventDefault();
 
+    // take ref value set on Input component and format it from string to integer
     const inputQuantity = quantityInputRef.current.value;
     const quantityInt = +inputQuantity;
 
+    // condition where it shouldn't do anything
     if (inputQuantity.trim().length === 0 || quantityInt <= 0 || quantityInt >10) {
       return
     };
 
+    // condition to add item info to cart
     props.onAddItemToCart(quantityInt);
   };
 

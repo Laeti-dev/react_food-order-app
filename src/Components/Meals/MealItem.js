@@ -8,13 +8,14 @@ import styles from "./MealItem.module.css"
 const MealItem = (props) => {
   const cartContext = useContext(CartContext);
 
+  // passing the MealItemForm quantity to the addItem function
   const addItemHandler = (quantity) => {
     cartContext.addItem({
       id: props.id,
       name: props.name,
       quantity: quantity,
-      price: props.price
-    })
+      price: props.price.toFixed(2)
+    });
   };
 
   return (
